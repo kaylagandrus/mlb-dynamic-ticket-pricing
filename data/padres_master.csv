@@ -1,0 +1,321 @@
+date,season,opponent,home_score,away_score,attendance,status,game_pk,avg_temp_f,avg_precip_mm
+2022-04-14,2022,Atlanta Braves,12,1,44844,Final,662237,61.3,0.0
+2022-04-15,2022,Atlanta Braves,2,5,41993,Final,662236,62.6,0.0
+2022-04-16,2022,Atlanta Braves,2,5,36924,Final,662235,62.8,0.0
+2022-04-17,2022,Atlanta Braves,2,1,37694,Final,662234,62.5,0.0
+2022-04-18,2022,Cincinnati Reds,4,1,31121,Final,662233,63.6,0.0
+2022-04-19,2022,Cincinnati Reds,6,2,31313,Final,662232,63.2,0.0
+2022-04-20,2022,Cincinnati Reds,6,0,25359,Final,662231,62.6,0.0
+2022-04-22,2022,Los Angeles Dodgers,1,6,44482,Final,662230,60.1,0.0
+2022-04-23,2022,Los Angeles Dodgers,3,2,44444,Final,662276,64.3,0.0
+2022-04-24,2022,Los Angeles Dodgers,2,10,44930,Final,662274,73.2,0.0
+2022-05-05,2022,Miami Marlins,2,1,31034,Final,662262,65.9,0.0
+2022-05-06,2022,Miami Marlins,3,2,37585,Final,662272,64.3,0.0
+2022-05-07,2022,Miami Marlins,0,8,34709,Final,662261,64.1,0.0
+2022-05-08,2022,Miami Marlins,3,2,37937,Final,662260,61.3,0.0
+2022-05-09,2022,Chicago Cubs,0,6,41595,Final,662259,61.5,0.0
+2022-05-10,2022,Chicago Cubs,5,4,31047,Final,662258,63.1,0.0
+2022-05-11,2022,Chicago Cubs,5,7,29344,Final,662273,62.2,0.0
+2022-05-23,2022,Milwaukee Brewers,3,2,31504,Final,662257,61.8,0.0
+2022-05-24,2022,Milwaukee Brewers,1,4,39834,Final,662229,63.5,0.0
+2022-05-25,2022,Milwaukee Brewers,1,2,27831,Final,662228,64.9,0.0
+2022-05-27,2022,Pittsburgh Pirates,4,3,41898,Final,662281,65.3,0.0
+2022-05-28,2022,Pittsburgh Pirates,2,4,38189,Final,662280,63.0,0.0
+2022-05-29,2022,Pittsburgh Pirates,4,2,44395,Final,662279,64.3,0.0
+2022-06-06,2022,New York Mets,5,11,34858,Final,662278,68.2,0.0
+2022-06-07,2022,New York Mets,7,0,31796,Final,662277,66.0,0.0
+2022-06-08,2022,New York Mets,13,2,40992,Final,662223,66.9,0.0
+2022-06-10,2022,Colorado Rockies,9,0,35207,Final,662275,68.6,0.0
+2022-06-11,2022,Colorado Rockies,2,6,30040,Final,662222,68.2,0.0
+2022-06-11,2022,Colorado Rockies,2,1,31415,Final,662251,68.2,0.0
+2022-06-12,2022,Colorado Rockies,2,4,41754,Final,662256,66.4,0.0
+2022-06-20,2022,Arizona Diamondbacks,4,1,35430,Final,662221,73.1,0.0
+2022-06-21,2022,Arizona Diamondbacks,3,2,31528,Final,662248,69.7,0.0
+2022-06-22,2022,Arizona Diamondbacks,10,4,31024,Final,662245,75.8,0.0
+2022-06-23,2022,Philadelphia Phillies,2,6,40355,Final,662227,74.5,0.0
+2022-06-24,2022,Philadelphia Phillies,1,0,38890,Final,662255,72.8,0.0
+2022-06-25,2022,Philadelphia Phillies,2,4,37467,Final,662247,72.5,0.0
+2022-06-26,2022,Philadelphia Phillies,5,8,41620,Final,662254,70.4,0.0
+2022-07-04,2022,Seattle Mariners,2,8,37913,Final,662270,68.3,0.0
+2022-07-05,2022,Seattle Mariners,2,6,29745,Final,662226,70.7,0.0
+2022-07-07,2022,San Francisco Giants,2,1,42656,Final,662253,70.2,0.0
+2022-07-08,2022,San Francisco Giants,6,3,42861,Final,662225,70.2,0.0
+2022-07-09,2022,San Francisco Giants,1,3,41714,Final,662266,71.6,0.0
+2022-07-10,2022,San Francisco Giants,0,12,38712,Final,662198,71.1,0.0
+2022-07-15,2022,Arizona Diamondbacks,5,3,41302,Final,662197,69.5,0.0
+2022-07-16,2022,Arizona Diamondbacks,4,3,42384,Final,662271,70.3,0.0
+2022-07-17,2022,Arizona Diamondbacks,1,3,36428,Final,662269,70.7,0.0
+2022-07-29,2022,Minnesota Twins,10,1,43171,Final,662268,70.4,0.0
+2022-07-30,2022,Minnesota Twins,4,7,39574,Final,662196,72.9,0.0
+2022-07-31,2022,Minnesota Twins,3,2,37336,Final,662267,72.1,1.3
+2022-08-01,2022,Colorado Rockies,4,1,29983,Final,662224,73.5,0.0
+2022-08-02,2022,Colorado Rockies,3,2,30759,Final,662220,74.2,0.0
+2022-08-02,2022,Colorado Rockies,13,5,23828,Final,662250,74.2,0.0
+2022-08-03,2022,Colorado Rockies,9,1,44652,Final,662244,73.1,0.0
+2022-08-04,2022,Colorado Rockies,3,7,30366,Final,662219,72.8,0.0
+2022-08-08,2022,San Francisco Giants,0,1,40686,Final,662218,75.3,0.0
+2022-08-09,2022,San Francisco Giants,7,4,38626,Final,662246,76.8,0.0
+2022-08-10,2022,San Francisco Giants,13,7,32834,Final,662217,77.5,0.0
+2022-08-18,2022,Washington Nationals,1,3,41820,Final,662182,73.3,0.0
+2022-08-19,2022,Washington Nationals,3,6,39474,Final,662181,72.0,0.0
+2022-08-20,2022,Washington Nationals,2,1,42529,Final,662180,72.0,0.0
+2022-08-21,2022,Washington Nationals,2,1,37040,Final,662179,72.3,0.0
+2022-08-23,2022,Cleveland Guardians,1,3,38166,Final,662213,72.4,0.0
+2022-08-24,2022,Cleveland Guardians,0,7,30409,Final,662212,72.8,0.0
+2022-09-05,2022,Arizona Diamondbacks,0,5,37713,Final,662211,77.7,0.0
+2022-09-06,2022,Arizona Diamondbacks,6,5,31380,Final,662205,79.0,0.0
+2022-09-07,2022,Arizona Diamondbacks,6,3,36948,Final,662216,81.3,0.0
+2022-09-09,2022,Los Angeles Dodgers,5,4,43286,Final,661850,75.3,2.1
+2022-09-10,2022,Los Angeles Dodgers,4,8,43639,Final,661849,75.4,0.1
+2022-09-11,2022,Los Angeles Dodgers,2,11,41652,Final,661848,75.0,0.0
+2022-09-20,2022,St. Louis Cardinals,5,0,39538,Final,662204,72.7,0.0
+2022-09-21,2022,St. Louis Cardinals,1,0,38643,Final,662203,72.8,0.0
+2022-09-22,2022,St. Louis Cardinals,4,5,33389,Final,662202,73.4,0.0
+2022-09-27,2022,Los Angeles Dodgers,4,3,32127,Final,662210,75.6,0.0
+2022-09-28,2022,Los Angeles Dodgers,0,1,32523,Final,662214,72.5,0.0
+2022-09-29,2022,Los Angeles Dodgers,2,5,35636,Final,662209,70.8,0.0
+2022-09-30,2022,Chicago White Sox,1,3,37490,Final,662208,68.7,0.0
+2022-10-01,2022,Chicago White Sox,5,2,38114,Final,662207,68.4,0.0
+2022-10-02,2022,Chicago White Sox,1,2,41407,Final,662190,70.3,0.0
+2022-10-03,2022,San Francisco Giants,7,4,31687,Final,662239,70.3,0.0
+2022-10-04,2022,San Francisco Giants,6,2,32884,Final,662252,70.5,0.0
+2022-10-05,2022,San Francisco Giants,1,8,32064,Final,662238,69.5,0.0
+2023-03-30,2023,Colorado Rockies,2,7,45103,Final,718778,55.0,0.1
+2023-03-31,2023,Colorado Rockies,1,4,43177,Final,718766,56.5,0.0
+2023-04-01,2023,Colorado Rockies,8,4,42663,Final,718750,58.2,0.0
+2023-04-02,2023,Colorado Rockies,3,1,43972,Final,718733,58.0,0.0
+2023-04-03,2023,Arizona Diamondbacks,5,4,37602,Final,718722,54.7,0.0
+2023-04-04,2023,Arizona Diamondbacks,6,8,34542,Final,718717,53.9,0.0
+2023-04-13,2023,Milwaukee Brewers,3,4,43296,Final,718589,54.5,0.0
+2023-04-14,2023,Milwaukee Brewers,2,11,43822,Final,718574,57.4,0.0
+2023-04-15,2023,Milwaukee Brewers,10,3,42284,Final,718560,58.6,0.0
+2023-04-16,2023,Milwaukee Brewers,0,1,43875,Final,718549,57.5,0.0
+2023-04-17,2023,Atlanta Braves,0,2,31846,Final,718533,57.6,0.0
+2023-04-18,2023,Atlanta Braves,1,8,42693,Final,718519,58.3,0.0
+2023-04-19,2023,Atlanta Braves,1,0,29581,Final,718507,59.7,0.0
+2023-05-01,2023,Cincinnati Reds,8,3,37491,Final,718345,59.1,0.0
+2023-05-02,2023,Cincinnati Reds,1,2,43127,Final,718335,59.4,0.0
+2023-05-03,2023,Cincinnati Reds,7,1,30531,Final,718330,60.3,0.0
+2023-05-05,2023,Los Angeles Dodgers,5,2,45116,Final,718295,61.7,0.0
+2023-05-06,2023,Los Angeles Dodgers,1,2,42402,Final,718279,61.7,0.0
+2023-05-07,2023,Los Angeles Dodgers,2,5,43994,Final,718266,62.8,0.0
+2023-05-15,2023,Kansas City Royals,4,0,43828,Final,718162,63.3,0.0
+2023-05-16,2023,Kansas City Royals,4,5,36060,Final,718144,64.0,0.0
+2023-05-17,2023,Kansas City Royals,3,4,32416,Final,718140,62.7,0.0
+2023-05-19,2023,Boston Red Sox,1,6,41530,Final,718107,63.6,0.0
+2023-05-20,2023,Boston Red Sox,2,4,40215,Final,718092,64.1,0.0
+2023-05-21,2023,Boston Red Sox,7,0,42825,Final,718079,63.8,0.0
+2023-06-02,2023,Chicago Cubs,1,2,43593,Final,717921,64.4,0.0
+2023-06-03,2023,Chicago Cubs,6,0,42655,Final,717903,64.2,0.0
+2023-06-04,2023,Chicago Cubs,1,7,44811,Final,717889,64.0,0.0
+2023-06-05,2023,Chicago Cubs,5,0,43629,Final,717880,62.8,0.0
+2023-06-06,2023,Seattle Mariners,1,4,40395,Final,717864,63.6,0.0
+2023-06-07,2023,Seattle Mariners,10,3,35490,Final,717863,64.8,0.0
+2023-06-13,2023,Cleveland Guardians,6,3,40197,Final,717772,64.6,0.0
+2023-06-14,2023,Cleveland Guardians,5,0,43660,Final,717758,64.8,0.0
+2023-06-15,2023,Cleveland Guardians,6,8,41864,Final,717750,65.4,0.0
+2023-06-16,2023,Tampa Bay Rays,2,6,42367,Final,717732,67.3,0.0
+2023-06-17,2023,Tampa Bay Rays,2,0,43180,Final,717717,67.8,0.0
+2023-06-18,2023,Tampa Bay Rays,5,4,44404,Final,717703,65.6,0.0
+2023-06-23,2023,Washington Nationals,13,3,42510,Final,717642,65.8,0.0
+2023-06-24,2023,Washington Nationals,0,2,43364,Final,717638,65.9,0.0
+2023-06-25,2023,Washington Nationals,3,8,41503,Final,717610,66.4,0.0
+2023-07-03,2023,Los Angeles Angels,10,3,45101,Final,717505,68.5,0.0
+2023-07-04,2023,Los Angeles Angels,8,5,44725,Final,717497,68.7,0.0
+2023-07-05,2023,Los Angeles Angels,5,3,43401,Final,717478,67.2,0.0
+2023-07-07,2023,New York Mets,5,7,42712,Final,717454,66.7,0.0
+2023-07-08,2023,New York Mets,3,1,42647,Final,717436,66.2,0.0
+2023-07-09,2023,New York Mets,6,2,42745,Final,717423,68.5,0.0
+2023-07-24,2023,Pittsburgh Pirates,4,8,43419,Final,717276,73.1,0.0
+2023-07-25,2023,Pittsburgh Pirates,5,1,43448,Final,717258,74.5,0.0
+2023-07-26,2023,Pittsburgh Pirates,2,3,41394,Final,717246,76.0,0.0
+2023-07-28,2023,Texas Rangers,7,1,44241,Final,717224,72.0,0.0
+2023-07-29,2023,Texas Rangers,4,0,42677,Final,717209,72.7,0.0
+2023-07-30,2023,Texas Rangers,5,3,42943,Final,717191,75.2,0.0
+2023-08-04,2023,Los Angeles Dodgers,5,10,42930,Final,717129,71.9,0.0
+2023-08-05,2023,Los Angeles Dodgers,8,3,42567,Final,717112,72.2,0.0
+2023-08-06,2023,Los Angeles Dodgers,2,8,43306,Final,717093,71.4,0.0
+2023-08-07,2023,Los Angeles Dodgers,7,13,44455,Final,717094,73.3,0.0
+2023-08-14,2023,Baltimore Orioles,1,4,38176,Final,716996,72.5,0.0
+2023-08-15,2023,Baltimore Orioles,10,3,35604,Final,716980,74.1,0.0
+2023-08-16,2023,Baltimore Orioles,5,2,42318,Final,716965,75.2,0.0
+2023-08-17,2023,Arizona Diamondbacks,1,3,38020,Final,716957,73.3,0.0
+2023-08-18,2023,Arizona Diamondbacks,4,0,40945,Final,716942,72.8,0.0
+2023-08-19,2023,Arizona Diamondbacks,1,8,41074,Final,716931,72.4,0.0
+2023-08-19,2023,Arizona Diamondbacks,4,6,34220,Final,716919,72.4,0.0
+2023-08-21,2023,Miami Marlins,6,2,32192,Final,716907,68.9,0.0
+2023-08-22,2023,Miami Marlins,0,3,43430,Final,716887,71.4,0.0
+2023-08-23,2023,Miami Marlins,4,0,33640,Final,716883,70.5,0.0
+2023-08-31,2023,San Francisco Giants,2,7,36639,Final,716777,71.8,0.0
+2023-09-01,2023,San Francisco Giants,7,3,40326,Final,716761,70.0,0.3
+2023-09-02,2023,San Francisco Giants,6,1,41983,Final,716743,73.4,0.0
+2023-09-03,2023,San Francisco Giants,4,0,41050,Final,716728,70.8,0.0
+2023-09-04,2023,Philadelphia Phillies,7,9,39719,Final,716720,69.6,0.0
+2023-09-05,2023,Philadelphia Phillies,8,0,42970,Final,716703,69.5,0.0
+2023-09-06,2023,Philadelphia Phillies,1,5,34317,Final,716691,71.0,0.0
+2023-09-18,2023,Colorado Rockies,11,9,42062,Final,716526,69.2,0.0
+2023-09-19,2023,Colorado Rockies,2,0,39809,Final,716516,69.9,0.0
+2023-09-20,2023,Colorado Rockies,3,2,35479,Final,716500,69.2,0.0
+2023-09-22,2023,St. Louis Cardinals,4,2,42983,Final,716476,68.7,0.0
+2023-09-23,2023,St. Louis Cardinals,2,5,42525,Final,716457,69.2,0.0
+2023-09-24,2023,St. Louis Cardinals,12,2,42505,Final,716444,69.7,0.0
+2024-03-28,2024,San Francisco Giants,6,4,44953,Final,745445,60.2,0.0
+2024-03-29,2024,San Francisco Giants,3,8,45427,Final,745435,58.2,0.0
+2024-03-31,2024,San Francisco Giants,13,4,34499,Final,745438,55.3,0.2
+2024-04-01,2024,St. Louis Cardinals,2,6,37566,Final,745437,58.8,0.0
+2024-04-02,2024,St. Louis Cardinals,2,5,43076,Final,745439,62.0,0.0
+2024-04-03,2024,St. Louis Cardinals,3,2,38835,Final,745440,60.6,0.0
+2024-04-08,2024,Chicago Cubs,9,8,33864,Final,745432,59.9,0.0
+2024-04-09,2024,Chicago Cubs,1,5,35171,Final,745433,66.4,0.0
+2024-04-10,2024,Chicago Cubs,10,2,39048,Final,745429,66.1,0.0
+2024-04-19,2024,Toronto Blue Jays,1,5,44890,Final,745430,61.9,0.0
+2024-04-20,2024,Toronto Blue Jays,2,5,43273,Final,745431,62.6,0.0
+2024-04-21,2024,Toronto Blue Jays,6,3,44527,Final,745434,63.0,0.0
+2024-04-26,2024,Philadelphia Phillies,3,9,40763,Final,745424,61.3,0.0
+2024-04-27,2024,Philadelphia Phillies,1,5,43018,Final,745425,62.6,0.0
+2024-04-28,2024,Philadelphia Phillies,6,8,42037,Final,745428,63.5,0.0
+2024-04-29,2024,Cincinnati Reds,2,5,39158,Final,745427,64.3,0.0
+2024-04-30,2024,Cincinnati Reds,6,4,36769,Final,745426,63.0,0.0
+2024-05-01,2024,Cincinnati Reds,6,2,32993,Final,745423,63.1,0.0
+2024-05-10,2024,Los Angeles Dodgers,2,1,43388,Final,745421,63.4,0.0
+2024-05-11,2024,Los Angeles Dodgers,0,5,46701,Final,745422,62.9,0.0
+2024-05-12,2024,Los Angeles Dodgers,4,0,43881,Final,745419,64.6,0.0
+2024-05-13,2024,Colorado Rockies,4,5,34458,Final,745420,63.1,0.0
+2024-05-14,2024,Colorado Rockies,3,6,40134,Final,745418,62.3,0.0
+2024-05-15,2024,Colorado Rockies,0,8,33951,Final,745417,62.7,0.0
+2024-05-24,2024,New York Yankees,0,8,43505,Final,745415,63.3,0.0
+2024-05-25,2024,New York Yankees,1,4,44845,Final,745411,61.8,0.0
+2024-05-26,2024,New York Yankees,5,2,45731,Final,745413,63.5,0.0
+2024-05-27,2024,Miami Marlins,2,1,38745,Final,745416,62.9,0.0
+2024-05-28,2024,Miami Marlins,4,0,41032,Final,745412,63.8,0.0
+2024-05-29,2024,Miami Marlins,1,9,32227,Final,745414,63.7,0.0
+2024-06-06,2024,Arizona Diamondbacks,3,4,39963,Final,745408,66.7,0.0
+2024-06-07,2024,Arizona Diamondbacks,10,3,40341,Final,745406,65.6,0.0
+2024-06-08,2024,Arizona Diamondbacks,13,1,42636,Final,745410,66.0,0.0
+2024-06-09,2024,Arizona Diamondbacks,3,9,41979,Final,745407,65.2,0.0
+2024-06-10,2024,Oakland Athletics,6,1,38822,Final,745409,66.2,0.0
+2024-06-11,2024,Oakland Athletics,4,3,41945,Final,745404,65.8,0.0
+2024-06-12,2024,Oakland Athletics,5,4,35688,Final,745405,68.1,0.0
+2024-06-20,2024,Milwaukee Brewers,7,6,42644,Final,745401,68.5,0.0
+2024-06-21,2024,Milwaukee Brewers,9,5,41282,Final,745403,69.5,0.0
+2024-06-22,2024,Milwaukee Brewers,6,4,39658,Final,745402,73.2,0.0
+2024-06-23,2024,Milwaukee Brewers,2,6,42048,Final,745396,73.6,0.0
+2024-06-24,2024,Washington Nationals,7,6,39164,Final,745397,72.4,0.0
+2024-06-25,2024,Washington Nationals,9,7,40825,Final,745399,70.7,0.0
+2024-06-26,2024,Washington Nationals,8,5,37397,Final,745400,69.4,0.0
+2024-07-05,2024,Arizona Diamondbacks,10,8,47171,Final,745398,71.6,0.0
+2024-07-06,2024,Arizona Diamondbacks,5,7,44761,Final,745395,71.5,0.0
+2024-07-07,2024,Arizona Diamondbacks,1,9,41112,Final,745391,71.0,0.0
+2024-07-09,2024,Seattle Mariners,3,8,43123,Final,745393,71.7,0.0
+2024-07-10,2024,Seattle Mariners,0,2,39611,Final,745394,71.2,0.0
+2024-07-12,2024,Atlanta Braves,1,6,44390,Final,745390,71.4,0.0
+2024-07-13,2024,Atlanta Braves,4,0,43097,Final,745392,71.5,0.0
+2024-07-14,2024,Atlanta Braves,3,6,42132,Final,745385,71.6,0.0
+2024-07-30,2024,Los Angeles Dodgers,6,5,47559,Final,745389,71.2,0.0
+2024-07-31,2024,Los Angeles Dodgers,8,1,46997,Final,745386,72.1,0.0
+2024-08-02,2024,Colorado Rockies,2,5,44393,Final,745387,76.4,0.0
+2024-08-03,2024,Colorado Rockies,3,2,44029,Final,745388,74.5,0.0
+2024-08-04,2024,Colorado Rockies,10,2,41828,Final,745384,74.3,0.0
+2024-08-12,2024,Pittsburgh Pirates,2,1,45393,Final,745383,75.1,0.0
+2024-08-13,2024,Pittsburgh Pirates,3,0,42949,Final,745382,73.7,0.0
+2024-08-14,2024,Pittsburgh Pirates,8,2,39770,Final,745381,73.9,0.0
+2024-08-19,2024,Minnesota Twins,5,3,40220,Final,745380,76.1,0.0
+2024-08-20,2024,Minnesota Twins,7,5,39143,Final,745374,78.1,0.0
+2024-08-21,2024,Minnesota Twins,4,11,36589,Final,745375,73.7,0.0
+2024-08-22,2024,New York Mets,3,8,41673,Final,745379,72.4,0.0
+2024-08-23,2024,New York Mets,7,0,40556,Final,745378,71.1,0.0
+2024-08-24,2024,New York Mets,1,7,42284,Final,745377,70.5,0.0
+2024-08-25,2024,New York Mets,3,2,41870,Final,745376,73.8,0.0
+2024-09-02,2024,Detroit Tigers,3,0,44957,Final,745373,71.5,0.0
+2024-09-04,2024,Detroit Tigers,6,5,41669,Final,745370,77.8,0.0
+2024-09-05,2024,Detroit Tigers,3,4,40221,Final,745369,83.4,0.0
+2024-09-06,2024,San Francisco Giants,5,1,42595,Final,745371,77.3,0.0
+2024-09-07,2024,San Francisco Giants,3,6,43318,Final,745372,84.0,0.0
+2024-09-08,2024,San Francisco Giants,6,7,42996,Final,745368,86.9,0.0
+2024-09-16,2024,Houston Astros,3,1,44443,Final,745367,67.9,0.0
+2024-09-17,2024,Houston Astros,3,4,44553,Final,745366,68.5,0.0
+2024-09-18,2024,Houston Astros,4,0,42883,Final,745365,68.2,0.0
+2024-09-20,2024,Chicago White Sox,3,2,45790,Final,745364,68.3,0.0
+2024-09-21,2024,Chicago White Sox,6,2,45360,Final,745360,68.3,0.0
+2024-09-22,2024,Chicago White Sox,4,2,45197,Final,745358,69.4,0.0
+2025-03-27,2025,Atlanta Braves,7,4,45568,Final,778545,61.2,0.0
+2025-03-28,2025,Atlanta Braves,4,3,41058,Final,778542,60.0,0.0
+2025-03-29,2025,Atlanta Braves,1,0,40587,Final,778520,60.3,0.0
+2025-03-30,2025,Atlanta Braves,5,0,41269,Final,778514,61.7,0.0
+2025-03-31,2025,Cleveland Guardians,7,2,43404,Final,778499,59.8,0.1
+2025-04-01,2025,Cleveland Guardians,7,0,37120,Final,778485,57.2,0.1
+2025-04-02,2025,Cleveland Guardians,5,2,35858,Final,778476,57.3,0.0
+2025-04-11,2025,Colorado Rockies,8,0,44089,Final,778361,65.7,0.0
+2025-04-12,2025,Colorado Rockies,2,0,44066,Final,778352,61.3,0.0
+2025-04-13,2025,Colorado Rockies,6,0,42706,Final,778330,61.0,0.0
+2025-04-14,2025,Chicago Cubs,10,4,47078,Final,778315,60.0,0.0
+2025-04-15,2025,Chicago Cubs,1,2,42492,Final,778305,59.9,0.0
+2025-04-16,2025,Chicago Cubs,4,2,41562,Final,778288,61.6,0.0
+2025-04-25,2025,Tampa Bay Rays,0,1,43319,Final,778172,60.1,0.0
+2025-04-26,2025,Tampa Bay Rays,1,4,44768,Final,778160,59.2,0.1
+2025-04-27,2025,Tampa Bay Rays,2,4,42221,Final,778146,60.6,0.0
+2025-04-29,2025,San Francisco Giants,7,4,47345,Final,778126,62.4,0.0
+2025-04-30,2025,San Francisco Giants,5,3,37698,Final,778105,61.6,0.0
+2025-05-12,2025,Los Angeles Angels,5,9,41419,Final,777947,63.6,0.0
+2025-05-13,2025,Los Angeles Angels,6,4,43957,Final,777932,62.5,0.0
+2025-05-14,2025,Los Angeles Angels,5,1,43766,Final,777914,64.6,0.0
+2025-05-16,2025,Seattle Mariners,1,5,41336,Final,777896,62.4,0.0
+2025-05-17,2025,Seattle Mariners,1,4,42240,Final,777875,60.3,0.2
+2025-05-18,2025,Seattle Mariners,1,6,43320,Final,777868,62.9,0.0
+2025-05-26,2025,Miami Marlins,4,3,40872,Final,777756,65.4,0.0
+2025-05-27,2025,Miami Marlins,8,6,40363,Final,777742,63.7,0.0
+2025-05-28,2025,Miami Marlins,8,10,33885,Final,777726,63.2,0.0
+2025-05-30,2025,Pittsburgh Pirates,3,2,42579,Final,777707,67.0,0.0
+2025-05-31,2025,Pittsburgh Pirates,0,5,42471,Final,777691,72.0,0.0
+2025-06-01,2025,Pittsburgh Pirates,6,4,42069,Final,777681,68.5,0.0
+2025-06-09,2025,Los Angeles Dodgers,7,8,45678,Final,777579,66.0,0.0
+2025-06-10,2025,Los Angeles Dodgers,11,1,45084,Final,777560,66.8,0.0
+2025-06-11,2025,Los Angeles Dodgers,2,5,45481,Final,777543,66.5,0.0
+2025-06-20,2025,Kansas City Royals,5,6,43574,Final,777426,67.8,0.0
+2025-06-21,2025,Kansas City Royals,5,1,43241,Final,777413,66.6,0.0
+2025-06-22,2025,Kansas City Royals,3,2,43567,Final,777396,68.0,0.0
+2025-06-23,2025,Washington Nationals,6,10,44074,Final,777382,64.2,0.0
+2025-06-24,2025,Washington Nationals,4,3,41229,Final,777372,67.6,0.0
+2025-06-25,2025,Washington Nationals,1,0,40532,Final,777360,67.0,0.0
+2025-07-04,2025,Texas Rangers,3,2,45114,Final,777239,70.6,0.0
+2025-07-05,2025,Texas Rangers,4,7,43297,Final,777223,70.7,0.0
+2025-07-06,2025,Texas Rangers,4,1,40711,Final,777207,69.6,0.0
+2025-07-07,2025,Arizona Diamondbacks,3,6,40045,Final,777203,69.8,0.0
+2025-07-08,2025,Arizona Diamondbacks,1,0,38670,Final,777185,72.2,0.0
+2025-07-09,2025,Arizona Diamondbacks,2,8,43066,Final,777162,73.0,0.0
+2025-07-10,2025,Arizona Diamondbacks,4,3,39079,Final,777158,72.0,0.0
+2025-07-11,2025,Philadelphia Phillies,4,2,43856,Final,777139,68.0,0.0
+2025-07-12,2025,Philadelphia Phillies,5,4,43444,Final,777126,68.9,0.0
+2025-07-13,2025,Philadelphia Phillies,1,2,43398,Final,777117,69.9,0.0
+2025-07-28,2025,New York Mets,7,6,43596,Final,776959,69.4,0.0
+2025-07-29,2025,New York Mets,7,1,45088,Final,776947,69.9,0.0
+2025-07-30,2025,New York Mets,5,0,42627,Final,776931,70.4,0.0
+2025-08-01,2025,St. Louis Cardinals,4,1,44933,Final,776906,69.1,0.0
+2025-08-02,2025,St. Louis Cardinals,5,8,44533,Final,776896,70.6,0.0
+2025-08-03,2025,St. Louis Cardinals,7,3,44709,Final,776884,71.8,0.0
+2025-08-08,2025,Boston Red Sox,2,10,44061,Final,776820,71.7,0.0
+2025-08-09,2025,Boston Red Sox,5,4,42389,Final,776807,71.2,0.0
+2025-08-10,2025,Boston Red Sox,6,2,43323,Final,776789,72.4,0.0
+2025-08-18,2025,San Francisco Giants,3,4,42730,Final,776683,70.4,0.0
+2025-08-19,2025,San Francisco Giants,5,1,40624,Final,776667,73.2,0.0
+2025-08-20,2025,San Francisco Giants,8,1,42589,Final,776656,75.1,0.0
+2025-08-21,2025,San Francisco Giants,8,4,39156,Final,776642,75.9,0.0
+2025-08-22,2025,Los Angeles Dodgers,2,1,44864,Final,776636,75.5,0.0
+2025-08-23,2025,Los Angeles Dodgers,5,1,46326,Final,776617,77.2,0.0
+2025-08-24,2025,Los Angeles Dodgers,2,8,43827,Final,776603,75.2,0.0
+2025-09-01,2025,Baltimore Orioles,3,4,45586,Final,776494,78.2,0.0
+2025-09-02,2025,Baltimore Orioles,2,6,42536,Final,776480,75.4,0.0
+2025-09-03,2025,Baltimore Orioles,5,7,35019,Final,776465,76.5,0.0
+2025-09-08,2025,Cincinnati Reds,4,3,40248,Final,776407,72.9,0.0
+2025-09-09,2025,Cincinnati Reds,2,4,41364,Final,776392,71.9,0.0
+2025-09-10,2025,Cincinnati Reds,1,2,40045,Final,776377,71.0,0.0
+2025-09-11,2025,Colorado Rockies,2,0,38844,Final,776365,70.4,0.0
+2025-09-12,2025,Colorado Rockies,2,4,40014,Final,776357,69.5,0.0
+2025-09-13,2025,Colorado Rockies,11,3,41854,Final,776341,69.9,0.0
+2025-09-14,2025,Colorado Rockies,9,6,40693,Final,776323,69.8,0.0
+2025-09-22,2025,Milwaukee Brewers,5,4,42371,Final,776222,72.2,0.0
+2025-09-23,2025,Milwaukee Brewers,7,0,44089,Final,776214,71.9,0.0
+2025-09-24,2025,Milwaukee Brewers,1,3,41462,Final,776198,72.7,0.0
+2025-09-26,2025,Arizona Diamondbacks,7,4,44547,Final,776170,68.5,0.0
+2025-09-27,2025,Arizona Diamondbacks,5,1,44457,Final,776152,70.1,0.0
+2025-09-28,2025,Arizona Diamondbacks,12,4,45072,Final,776136,71.3,0.0
