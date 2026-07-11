@@ -1,0 +1,6 @@
+*.duckdb
+*.duckdb.wal
+*.db
+__pycache__/
+.DS_Store
+*.ipynb_checkpoints
