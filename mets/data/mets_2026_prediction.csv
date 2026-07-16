@@ -1,0 +1,84 @@
+date,season,opponent,home_score,away_score,attendance,status,game_pk
+2026-03-26,2026,Pittsburgh Pirates,11.0,7.0,41449,Final,823649
+2026-03-28,2026,Pittsburgh Pirates,4.0,2.0,37183,Final,823651
+2026-03-29,2026,Pittsburgh Pirates,3.0,4.0,36940,Final,823647
+2026-04-07,2026,Arizona Diamondbacks,4.0,3.0,34753,Final,823648
+2026-04-08,2026,Arizona Diamondbacks,2.0,7.0,33422,Final,823646
+2026-04-09,2026,Arizona Diamondbacks,1.0,7.0,35783,Final,823645
+2026-04-10,2026,Athletics,0.0,4.0,36349,Final,823643
+2026-04-11,2026,Athletics,6.0,11.0,38244,Final,823644
+2026-04-12,2026,Athletics,0.0,1.0,37316,Final,823642
+2026-04-21,2026,Minnesota Twins,3.0,5.0,32798,Final,823640
+2026-04-22,2026,Minnesota Twins,3.0,2.0,32665,Final,823641
+2026-04-23,2026,Minnesota Twins,10.0,8.0,34253,Final,823639
+2026-04-24,2026,Colorado Rockies,3.0,4.0,36233,Final,823638
+2026-04-25,2026,Colorado Rockies,,,,Postponed,823637
+2026-04-26,2026,Colorado Rockies,1.0,3.0,,Final,823635
+2026-04-26,2026,Colorado Rockies,0.0,3.0,38155,Final,823637
+2026-04-28,2026,Washington Nationals,8.0,0.0,33622,Final,823636
+2026-04-29,2026,Washington Nationals,2.0,14.0,32624,Final,823633
+2026-04-30,2026,Washington Nationals,4.0,5.0,34621,Final,823634
+2026-05-12,2026,Detroit Tigers,10.0,2.0,36382,Final,823632
+2026-05-13,2026,Detroit Tigers,3.0,2.0,33989,Final,823631
+2026-05-14,2026,Detroit Tigers,9.0,4.0,34642,Final,823630
+2026-05-15,2026,New York Yankees,2.0,5.0,40004,Final,823629
+2026-05-16,2026,New York Yankees,6.0,3.0,41067,Final,823627
+2026-05-17,2026,New York Yankees,7.0,6.0,40232,Final,823628
+2026-05-25,2026,Cincinnati Reds,2.0,7.0,36734,Final,823625
+2026-05-26,2026,Cincinnati Reds,2.0,7.0,36848,Final,823624
+2026-05-27,2026,Cincinnati Reds,4.0,2.0,33453,Final,823626
+2026-05-29,2026,Miami Marlins,9.0,7.0,39386,Final,823623
+2026-05-30,2026,Miami Marlins,6.0,1.0,38552,Final,823622
+2026-05-31,2026,Miami Marlins,10.0,1.0,40634,Final,823621
+2026-06-09,2026,St. Louis Cardinals,0.0,7.0,35175,Final,823620
+2026-06-10,2026,St. Louis Cardinals,2.0,9.0,34238,Final,823618
+2026-06-11,2026,St. Louis Cardinals,5.0,4.0,37019,Final,823619
+2026-06-12,2026,Atlanta Braves,7.0,5.0,38438,Final,823617
+2026-06-13,2026,Atlanta Braves,1.0,3.0,38269,Final,823616
+2026-06-14,2026,Atlanta Braves,8.0,1.0,40106,Final,823615
+2026-06-22,2026,Chicago Cubs,,,,Postponed,823613
+2026-06-23,2026,Chicago Cubs,6.0,9.0,35668,Final,823614
+2026-06-24,2026,Chicago Cubs,3.0,10.0,31951,Final,823613
+2026-06-24,2026,Chicago Cubs,5.0,10.0,33934,Final,823611
+2026-06-25,2026,Chicago Cubs,3.0,4.0,36035,Final,823612
+2026-06-26,2026,Philadelphia Phillies,1.0,2.0,39077,Final,823610
+2026-06-27,2026,Philadelphia Phillies,6.0,2.0,37338,Final,823609
+2026-06-28,2026,Philadelphia Phillies,4.0,5.0,38770,Final,823608
+2026-07-07,2026,Kansas City Royals,12.0,16.0,32734,Final,823607
+2026-07-08,2026,Kansas City Royals,6.0,2.0,32227,Final,823605
+2026-07-09,2026,Kansas City Royals,7.0,3.0,33868,Final,823606
+2026-07-10,2026,Boston Red Sox,2.0,6.0,38090,Final,823604
+2026-07-11,2026,Boston Red Sox,0.0,4.0,38371,Final,823603
+2026-07-12,2026,Boston Red Sox,2.0,3.0,37638,Final,823602
+2026-07-24,2026,Los Angeles Dodgers,,,,Scheduled,823601
+2026-07-25,2026,Los Angeles Dodgers,,,,Scheduled,823600
+2026-07-26,2026,Los Angeles Dodgers,,,,Scheduled,823599
+2026-07-27,2026,Atlanta Braves,,,,Scheduled,823597
+2026-07-28,2026,Atlanta Braves,,,,Scheduled,823598
+2026-07-29,2026,Atlanta Braves,,,,Scheduled,823596
+2026-07-30,2026,Miami Marlins,,,,Scheduled,823595
+2026-07-31,2026,Miami Marlins,,,,Scheduled,823593
+2026-08-01,2026,Miami Marlins,,,,Scheduled,823594
+2026-08-02,2026,Miami Marlins,,,,Scheduled,823592
+2026-08-14,2026,Washington Nationals,,,,Scheduled,823591
+2026-08-15,2026,Washington Nationals,,,,Scheduled,823588
+2026-08-16,2026,Washington Nationals,,,,Scheduled,823590
+2026-08-17,2026,San Diego Padres,,,,Scheduled,823589
+2026-08-18,2026,San Diego Padres,,,,Scheduled,823586
+2026-08-19,2026,San Diego Padres,,,,Scheduled,823587
+2026-08-25,2026,Milwaukee Brewers,,,,Scheduled,823585
+2026-08-26,2026,Milwaukee Brewers,,,,Scheduled,823584
+2026-08-27,2026,Milwaukee Brewers,,,,Scheduled,823581
+2026-08-28,2026,Houston Astros,,,,Scheduled,823583
+2026-08-29,2026,Houston Astros,,,,Scheduled,823582
+2026-08-30,2026,Houston Astros,,,,Scheduled,823580
+2026-09-04,2026,San Francisco Giants,,,,Scheduled,823579
+2026-09-05,2026,San Francisco Giants,,,,Scheduled,823577
+2026-09-06,2026,San Francisco Giants,,,,Scheduled,823578
+2026-09-14,2026,Baltimore Orioles,,,,Scheduled,823575
+2026-09-15,2026,Baltimore Orioles,,,,Scheduled,823574
+2026-09-16,2026,Baltimore Orioles,,,,Scheduled,823576
+2026-09-17,2026,Philadelphia Phillies,,,,Scheduled,823573
+2026-09-18,2026,Philadelphia Phillies,,,,Scheduled,823572
+2026-09-19,2026,Philadelphia Phillies,,,,Scheduled,823571
+2026-09-20,2026,Philadelphia Phillies,,,,Scheduled,823570
