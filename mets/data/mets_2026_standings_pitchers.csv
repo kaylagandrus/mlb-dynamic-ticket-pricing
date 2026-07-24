@@ -1,0 +1,50 @@
+date,season,opponent,home_score,away_score,attendance,status,game_pk,mets_wins,opp_wins,mets_losses,opp_losses,mets_win_pct,opp_win_pct,mets_streak_code,opp_streak_code,mets_streak_num,opp_streak_num,mets_games_back,opp_games_back,mets_starter_name,mets_starter_era,opp_starter_name,opp_starter_era,starter_era_diff,mets_starter_is_ace
+2026-03-26,2026,Pittsburgh Pirates,11.0,7.0,41449.0,Final,823649,1,0,0,1,1.0,0.0,W1,L1,1,-1,0.0,1.0,Freddy Peralta,,Paul Skenes,,,0
+2026-03-28,2026,Pittsburgh Pirates,4.0,2.0,37183.0,Final,823651,2,0,0,2,1.0,0.0,W2,L2,2,-2,0.0,2.0,David Peterson,,Mitch Keller,,,0
+2026-03-29,2026,Pittsburgh Pirates,3.0,4.0,36940.0,Final,823647,2,1,1,2,0.667,0.333,L1,W1,-1,1,1.0,2.0,Nolan McLean,,Carmen Mlodzinski,,,0
+2026-04-07,2026,Arizona Diamondbacks,4.0,3.0,34753.0,Final,823648,7,5,4,6,0.636,0.455,W4,L1,4,-1,0.0,4.0,Freddy Peralta,4.35,Zac Gallen,3.6,-0.7499999999999996,0
+2026-04-08,2026,Arizona Diamondbacks,2.0,7.0,33422.0,Final,823646,7,6,5,6,0.583,0.5,L1,W1,-1,1,0.5,3.0,David Peterson,4.66,Ryne Nelson,5.79,1.13,0
+2026-04-09,2026,Arizona Diamondbacks,1.0,7.0,35783.0,Final,823645,7,7,6,6,0.538,0.538,L2,W2,-2,2,1.0,2.5,Nolan McLean,2.61,Eduardo Rodriguez,0.0,-2.61,1
+2026-04-10,2026,Athletics,0.0,4.0,36349.0,Final,823643,7,6,7,7,0.5,0.462,L3,W3,-3,3,2.0,1.0,Clay Holmes,1.42,J.T. Ginn,,,1
+2026-04-11,2026,Athletics,6.0,11.0,38244.0,Final,823644,7,7,8,7,0.467,0.5,L4,W4,-4,4,2.0,0.0,Kodai Senga,3.09,Jacob Lopez,6.48,3.3900000000000006,0
+2026-04-12,2026,Athletics,0.0,1.0,37316.0,Final,823642,7,8,9,7,0.438,0.533,L5,W5,-5,5,3.0,0.0,Freddy Peralta,4.8,Aaron Civale,2.7,-2.0999999999999996,0
+2026-04-21,2026,Minnesota Twins,3.0,5.0,32798.0,Final,823640,7,12,16,11,0.304,0.522,L12,W1,-12,1,8.5,1.0,Nolan McLean,2.28,Simeon Woods Richardson,6.1,3.82,1
+2026-04-22,2026,Minnesota Twins,3.0,2.0,32665.0,Final,823641,8,12,16,12,0.333,0.5,W1,L1,1,-1,8.5,1.0,Clay Holmes,1.96,Connor Prielipp,,,1
+2026-04-23,2026,Minnesota Twins,10.0,8.0,34253.0,Final,823639,9,12,16,13,0.36,0.48,W2,L2,2,-2,8.5,1.5,Christian Scott,,Joe Ryan,3.29,,0
+2026-04-24,2026,Colorado Rockies,3.0,4.0,36233.0,Final,823638,9,11,17,16,0.346,0.407,L1,W1,-1,1,9.5,7.0,Freddy Peralta,4.05,Michael Lorenzen,7.84,3.79,0
+2026-04-26,2026,Colorado Rockies,1.0,3.0,,Final,823635,9,13,19,16,0.321,0.448,L3,W3,-3,3,10.5,6.5,Nolan McLean,2.67,Jose Quintana,6.23,3.5600000000000005,1
+2026-04-26,2026,Colorado Rockies,0.0,3.0,38155.0,Final,823637,9,13,19,16,0.321,0.448,L3,W3,-3,3,10.5,6.5,Kodai Senga,8.83,Chase Dollander,,,0
+2026-04-28,2026,Washington Nationals,8.0,0.0,33622.0,Final,823636,10,13,19,17,0.345,0.433,W1,L1,1,-1,10.5,8.0,Clay Holmes,2.1,Zack Littell,8.1,6.0,1
+2026-04-29,2026,Washington Nationals,2.0,14.0,32624.0,Final,823633,10,14,20,17,0.333,0.452,L1,W1,-1,1,11.5,8.0,David Peterson,6.41,Cade Cavalli,4.01,-2.4000000000000004,0
+2026-04-30,2026,Washington Nationals,4.0,5.0,34621.0,Final,823634,10,15,21,17,0.323,0.469,L2,W2,-2,2,11.5,7.0,Freddy Peralta,3.9,Miles Mikolas,12.41,8.51,0
+2026-05-12,2026,Detroit Tigers,10.0,2.0,36382.0,Final,823632,16,19,25,23,0.39,0.452,W1,L1,1,-1,12.5,3.0,Freddy Peralta,3.12,Jack Flaherty,5.56,2.4399999999999995,0
+2026-05-13,2026,Detroit Tigers,3.0,2.0,33989.0,Final,823631,17,19,25,24,0.405,0.442,W2,L2,2,-2,12.5,4.0,Christian Scott,3.27,Framber Valdez,4.57,1.3000000000000003,0
+2026-05-14,2026,Detroit Tigers,9.0,4.0,34642.0,Final,823630,18,19,25,25,0.419,0.432,W3,L3,3,-3,11.5,4.5,Nolan McLean,2.78,Keider Montero,3.18,0.40000000000000036,1
+2026-05-15,2026,New York Yankees,2.0,5.0,40004.0,Final,823629,18,28,26,17,0.409,0.622,L1,W1,-1,1,12.5,2.0,Clay Holmes,1.86,Cam Schlittler,1.35,-0.51,1
+2026-05-16,2026,New York Yankees,6.0,3.0,41067.0,Final,823627,19,28,26,18,0.422,0.609,W1,L1,1,-1,11.5,2.0,Huascar Brazobán,9.0,Carlos Rodón,6.23,-2.7699999999999996,0
+2026-05-17,2026,New York Yankees,7.0,6.0,40232.0,Final,823628,20,28,26,19,0.435,0.596,W2,L2,2,-2,11.5,3.0,Freddy Peralta,3.1,Elmer Rodríguez,5.19,2.0900000000000003,0
+2026-05-25,2026,Cincinnati Reds,2.0,7.0,36734.0,Final,823625,22,28,32,25,0.407,0.528,L4,W2,-4,2,14.0,4.0,Nolan McLean,3.57,Nick Lodolo,7.2,3.6300000000000003,0
+2026-05-26,2026,Cincinnati Reds,2.0,7.0,36848.0,Final,823624,22,29,33,25,0.4,0.537,L5,W3,-5,3,15.0,4.0,David Peterson,6.99,Chase Burns,1.83,-5.16,0
+2026-05-27,2026,Cincinnati Reds,4.0,2.0,33453.0,Final,823626,23,29,33,26,0.411,0.527,W1,L1,1,-1,14.0,5.0,Huascar Brazobán,5.4,Andrew Abbott,3.97,-1.4300000000000002,0
+2026-05-29,2026,Miami Marlins,9.0,7.0,39386.0,Final,823623,24,26,33,32,0.421,0.448,W2,L3,2,-3,14.5,13.0,Freddy Peralta,3.52,Max Meyer,2.52,-1.0,0
+2026-05-30,2026,Miami Marlins,6.0,1.0,38552.0,Final,823622,25,26,33,33,0.431,0.441,W3,L4,3,-4,14.5,14.0,Christian Scott,3.2,Tyler Phillips,0.0,-3.2,0
+2026-05-31,2026,Miami Marlins,10.0,1.0,40634.0,Final,823621,26,26,33,34,0.441,0.433,W4,L5,4,-5,13.5,14.0,Nolan McLean,4.4,John King,,,0
+2026-06-09,2026,St. Louis Cardinals,0.0,7.0,35175.0,Final,823620,29,36,37,28,0.439,0.563,L1,W5,-1,5,15.5,4.5,Freddy Peralta,3.62,Dustin May,4.59,0.9699999999999998,0
+2026-06-10,2026,St. Louis Cardinals,2.0,9.0,34238.0,Final,823618,29,37,38,28,0.433,0.569,L2,W6,-2,6,15.5,3.5,Austin Warren,0.0,Andre Pallante,3.96,3.96,1
+2026-06-11,2026,St. Louis Cardinals,5.0,4.0,37019.0,Final,823619,30,37,38,29,0.441,0.561,W1,L1,1,-1,15.0,4.0,Christian Scott,2.5,Hunter Dobbins,6.23,3.7300000000000004,1
+2026-06-12,2026,Atlanta Braves,7.0,5.0,38438.0,Final,823617,31,45,38,24,0.449,0.652,W2,L3,2,-3,14.0,0.0,Nolan McLean,3.98,Spencer Strider,4.0,0.020000000000000018,0
+2026-06-13,2026,Atlanta Braves,1.0,3.0,38269.0,Final,823616,31,46,39,24,0.443,0.657,L1,W1,-1,1,15.0,0.0,Sean Manaea,,Martín Pérez,3.23,,0
+2026-06-14,2026,Atlanta Braves,8.0,1.0,40106.0,Final,823615,32,46,39,25,0.451,0.648,W1,L1,1,-1,14.0,0.0,Freddy Peralta,4.04,Bryce Elder,2.66,-1.38,0
+2026-06-23,2026,Chicago Cubs,6.0,9.0,35668.0,Final,823614,34,41,44,37,0.436,0.526,L3,W1,-3,1,14.0,7.5,Kodai Senga,9.0,Edward Cabrera,5.21,-3.79,0
+2026-06-24,2026,Chicago Cubs,3.0,10.0,31951.0,Final,823613,34,43,46,37,0.425,0.538,L5,W3,-5,3,14.5,7.0,Nolan McLean,3.67,Javier Assad,3.95,0.28000000000000025,0
+2026-06-24,2026,Chicago Cubs,5.0,10.0,33934.0,Final,823611,34,43,46,37,0.425,0.538,L5,W3,-5,3,14.5,7.0,Sean Manaea,3.18,Shota Imanaga,4.26,1.0799999999999996,0
+2026-06-25,2026,Chicago Cubs,3.0,4.0,36035.0,Final,823612,34,44,47,37,0.42,0.543,L6,W4,-6,4,15.0,6.5,Freddy Peralta,4.83,Matthew Boyd,6.0,1.17,0
+2026-06-26,2026,Philadelphia Phillies,1.0,2.0,39077.0,Final,823610,34,46,48,36,0.415,0.561,L7,W4,-7,4,16.0,4.0,Zac Thornton,8.31,Zack Wheeler,2.11,-6.200000000000001,0
+2026-06-27,2026,Philadelphia Phillies,6.0,2.0,37338.0,Final,823609,35,46,48,37,0.422,0.554,W1,L1,1,-1,15.0,4.0,Christian Scott,3.1,Tim Mayza,3.0,-0.10000000000000009,0
+2026-06-28,2026,Philadelphia Phillies,4.0,5.0,38770.0,Final,823608,35,47,49,37,0.417,0.56,L1,W1,-1,1,15.0,3.0,Cionel Pérez,,Jesús Luzardo,4.0,,0
+2026-07-07,2026,Kansas City Royals,12.0,16.0,32734.0,Final,823607,38,38,54,54,0.413,0.413,L1,W3,-1,3,15.0,10.0,Cionel Pérez,0.0,Seth Lugo,4.2,4.2,1
+2026-07-08,2026,Kansas City Royals,6.0,2.0,32227.0,Final,823605,39,38,54,55,0.419,0.409,W1,L1,1,-1,15.0,10.0,Christian Scott,3.49,Steven Cruz,0.0,-3.49,0
+2026-07-09,2026,Kansas City Royals,7.0,3.0,33868.0,Final,823606,40,38,54,56,0.426,0.404,W2,L2,2,-2,15.0,10.0,Sean Manaea,4.32,Michael Wacha,3.45,-0.8700000000000001,0
+2026-07-10,2026,Boston Red Sox,2.0,6.0,38090.0,Final,823604,40,44,55,48,0.421,0.478,L1,W7,-1,7,15.0,11.0,Nolan McLean,3.73,Sonny Gray,2.61,-1.12,0
+2026-07-11,2026,Boston Red Sox,0.0,4.0,38371.0,Final,823603,40,45,56,48,0.417,0.484,L2,W8,-2,8,15.0,11.0,Freddy Peralta,4.68,Eduardo Rivera,,,0
+2026-07-12,2026,Boston Red Sox,2.0,3.0,37638.0,Final,823602,40,46,57,48,0.412,0.489,L3,W9,-3,9,16.0,10.0,Zac Thornton,4.35,Payton Tolle,3.14,-1.2099999999999995,0
