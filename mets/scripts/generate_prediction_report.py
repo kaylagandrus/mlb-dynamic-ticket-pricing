@@ -18,7 +18,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 
-# Local (non-iCloud) cache — see sync_data.py for why, and how to move files
+# Local (non-iCloud) cache: see sync_data.py for why, and how to move files
 # between here and the iCloud project folder.
 DATA_DIR = Path.home() / "Library" / "Application Support" / "mets-prediction" / "data"
 LOG_PATH = DATA_DIR / "mets_2026_predictions_log.csv"
@@ -27,8 +27,8 @@ REPORT_PATH = DATA_DIR / "prediction_accuracy_report.html"
 
 def safe_read_csv(path, retries=5, delay=1.0, **kwargs):
     """Pandas' C parser reading an iCloud-backed path directly can throw
-    'Resource deadlock avoided' when running under launchd (no controlling session)
-    — it conflicts with iCloud's file coordination in a way plain open() doesn't.
+    'Resource deadlock avoided' when running under launchd (no controlling session),
+    it conflicts with iCloud's file coordination in a way plain open() doesn't.
     Read the bytes with open() first, then hand pandas an in-memory buffer."""
     last_err = None
     for attempt in range(retries):
@@ -69,7 +69,7 @@ def days_out_bucket(days_out):
 
 def build_report():
     if not LOG_PATH.exists():
-        print(f"No log file yet at {LOG_PATH} — run predict_next_home_game.py first.")
+        print(f"No log file yet at {LOG_PATH}, run predict_next_home_game.py first.")
         return
 
     log = safe_read_csv(LOG_PATH)
@@ -115,7 +115,7 @@ def build_report():
         ".actual-col { background: #fff3e0; font-weight: bold; }",
         "caption { text-align: left; font-size: 0.85rem; color: #666; margin-bottom: 0.3rem; }",
         "</style></head><body>",
-        "<h1>Mets 2026 Attendance Predictions — Tracked Over Time</h1>",
+        "<h1>Mets 2026 Attendance Predictions: Tracked Over Time</h1>",
         f"<p>Generated from {len(log)} logged prediction run(s) across {log['game_label'].nunique()} game(s).</p>",
         "<h2>Prediction by Days Before Game</h2>",
         "<table><caption>Each column is the predicted attendance when the run happened that many days before the game. "
@@ -133,7 +133,7 @@ def build_report():
 
     html_parts.append("<h2>Accuracy by Lead Time</h2>")
     if accuracy.empty:
-        html_parts.append("<p>No games with a recorded actual attendance yet — fill in "
+        html_parts.append("<p>No games with a recorded actual attendance yet, fill in "
                            "'actual_attendance' in mets_2026_predictions_log.csv once games are played.</p>")
     else:
         html_parts.append("<table><caption>Mean absolute error and percent error, grouped by how "

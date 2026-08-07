@@ -33,7 +33,7 @@ import pandas as pd
 import requests
 from sklearn.ensemble import GradientBoostingRegressor
 
-# Local (non-iCloud) cache — launchd background runs can't reliably read/write
+# Local (non-iCloud) cache: launchd background runs can't reliably read/write
 # files inside iCloud Drive (confirmed by testing: macOS file-coordination/TCC
 # conflicts with unattended processes). Use sync_data.py to move files between
 # here and the iCloud project folder when running interactively.
@@ -43,8 +43,8 @@ DATA_DIR.mkdir(parents=True, exist_ok=True)
 
 def safe_read_csv(path, retries=5, delay=1.0, **kwargs):
     """Pandas' C parser reading an iCloud-backed path directly can throw
-    'Resource deadlock avoided' when running under launchd (no controlling session)
-    — it conflicts with iCloud's file coordination in a way plain open() doesn't.
+    'Resource deadlock avoided' when running under launchd (no controlling session),
+    it conflicts with iCloud's file coordination in a way plain open() doesn't.
     Read the bytes with open() first, then hand pandas an in-memory buffer."""
     last_err = None
     for attempt in range(retries):
@@ -75,6 +75,8 @@ def safe_to_csv(df, path, retries=5, delay=1.0, **kwargs):
             last_err = e
             time.sleep(delay)
     raise last_err
+
+
 TEAM_ID = 121  # New York Mets
 LAT, LON = 40.7571, -73.8458  # Citi Field
 ACE_ERA_THRESHOLD = 3.00
@@ -86,7 +88,7 @@ NUMERIC_FEATURES = [
     "mets_win_pct", "opp_win_pct",
     "mets_streak_num",
     "mets_starter_era", "opp_starter_era",
-    "is_day_game",
+    "is_day_game", "is_game2",
 ]
 CATEGORICAL_FEATURES = ["opponent"]
 TARGET = "attendance"
@@ -150,6 +152,8 @@ def get_2026_home_games(known_game_pks=frozenset()):
                 "national_network": ", ".join(tv_national) if tv_national else None,
                 "game_hour_et": None,
                 "game_date_utc": g.get("gameDate"),
+                "game_number": g.get("gameNumber", 1),
+                "is_doubleheader": int(g.get("doubleHeader", "N") != "N"),
             })
     df = pd.DataFrame(games)
     if df.empty:
@@ -160,6 +164,7 @@ def get_2026_home_games(known_game_pks=frozenset()):
         hour_et = (dt.dt.hour - 4) % 24
         df["game_hour_et"] = hour_et + dt.dt.minute / 60
     df["is_day_game"] = (df["game_hour_et"] < 17).astype("Int64")
+    df["is_game2"] = (df["game_number"] == 2).astype(int)
 
     missing_att = df[(df["status"] == "Final") & df["attendance"].isna() & ~df["game_pk"].isin(known_game_pks)]
     if len(missing_att) > 0:
@@ -291,9 +296,12 @@ def build_features(games_df, team_id_map, today_str):
     return pd.DataFrame(rows)
 
 
+TRACKING_WINDOW_DAYS = 9  # start logging a game once it's this many days out or fewer
+
+
 def main():
     today = date.today().isoformat()
-    print(f"=== Mets next-home-game attendance prediction — run date {today} ===\n")
+    print(f"=== Mets home-game attendance prediction, run date {today} ===\n")
 
     master_path = DATA_DIR / "mets_2026_master.csv"
     existing = safe_read_csv(master_path) if master_path.exists() else pd.DataFrame(columns=["game_pk"])
@@ -303,16 +311,21 @@ def main():
     print(f"  {len(games_2026)} total 2026 home games ({(games_2026['status'] == 'Final').sum()} Final, "
           f"{(games_2026['status'] == 'Scheduled').sum()} Scheduled)")
 
-    upcoming = games_2026[games_2026["status"] == "Scheduled"].sort_values("date")
-    if upcoming.empty:
-        print("No upcoming Mets home games found. Nothing to predict.")
-        return
-    next_game = upcoming.iloc[[0]]
-    print(f"\nNext Mets home game: {next_game.iloc[0]['date']} vs {next_game.iloc[0]['opponent']}")
-    if pd.isna(next_game.iloc[0]["mets_starter_name"]):
-        print("  (Mets starter not yet announced)")
-    if pd.isna(next_game.iloc[0]["opp_starter_name"]):
-        print("  (Opponent starter not yet announced)")
+    upcoming = games_2026[games_2026["status"] == "Scheduled"].sort_values("date").copy()
+    upcoming["days_out"] = (pd.to_datetime(upcoming["date"]) - pd.Timestamp(today)).dt.days
+    tracked_games = upcoming[(upcoming["days_out"] >= 0) & (upcoming["days_out"] <= TRACKING_WINDOW_DAYS)]
+
+    if tracked_games.empty:
+        next_out = upcoming["days_out"].min() if not upcoming.empty else None
+        print(f"\nNo home games within {TRACKING_WINDOW_DAYS} days yet"
+              + (f" (next one is {next_out} days out)." if next_out is not None else ", none scheduled."))
+    else:
+        print(f"\nTracking {len(tracked_games)} home game(s) within {TRACKING_WINDOW_DAYS} days:")
+        for _, g in tracked_games.iterrows():
+            starter_note = ""
+            if pd.isna(g["mets_starter_name"]) or pd.isna(g["opp_starter_name"]):
+                starter_note = "  (starter(s) not yet announced)"
+            print(f"  {g['date']} vs {g['opponent']} ({int(g['days_out'])}d out){starter_note}")
 
     completed_2026 = games_2026[(games_2026["status"] == "Final") & games_2026["attendance"].notna()]
     new_completed = completed_2026[~completed_2026["game_pk"].isin(existing["game_pk"])]
@@ -320,8 +333,8 @@ def main():
           f"{len(new_completed)} new since last run")
 
     team_id_map = get_team_id_map()
-    print(f"Building features for {len(new_completed)} new completed games + the next game...")
-    feature_rows = build_features(pd.concat([new_completed, next_game]), team_id_map, today)
+    print(f"Building features for {len(new_completed)} new completed games + {len(tracked_games)} tracked game(s)...")
+    feature_rows = build_features(pd.concat([new_completed, tracked_games]), team_id_map, today)
 
     new_completed_features = feature_rows[feature_rows["status"] == "Final"].copy()
     next_features = feature_rows[feature_rows["status"] == "Scheduled"].copy()
@@ -330,6 +343,12 @@ def main():
         if not new_completed_features.empty else existing
     safe_to_csv(completed_features, master_path, index=False)
     print(f"Saved refreshed mets_2026_master.csv ({len(completed_features)} completed games total)")
+
+    if next_features.empty:
+        print("\nNothing within the tracking window, nothing to predict this run.")
+        from generate_prediction_report import build_report
+        build_report()
+        return
 
     print("\nTraining Gradient Boosting on 2022-2025 + all completed 2026 home games...")
     train_hist = safe_read_csv(DATA_DIR / "mets_master.csv").dropna(subset=["attendance"])
@@ -348,42 +367,44 @@ def main():
     missing_next = X_next.isna().any(axis=1)
     if missing_next.any():
         missing_cols = X_next.columns[X_next.isna().any()].tolist()
-        print(f"  Note: next game is missing {missing_cols} — filling with training column means as a fallback")
+        print(f"  Note: {missing_next.sum()} game(s) missing {missing_cols}, filling with training column means as a fallback")
         X_next = X_next.fillna(X_train.mean())
 
     model = GradientBoostingRegressor(n_estimators=200, max_depth=3, learning_rate=0.05, random_state=42)
     model.fit(X_train, y_train)
-    prediction = model.predict(X_next)[0]
+    predictions = model.predict(X_next)
 
-    game_date = next_game.iloc[0]["date"]
-    opponent = next_game.iloc[0]["opponent"]
+    next_features = next_features.reset_index(drop=True)
+    log_rows = []
     print(f"\n{'=' * 60}")
-    print(f"PREDICTION: {game_date} vs {opponent}")
-    print(f"Predicted attendance: {prediction:,.0f}")
+    for i, prediction in enumerate(predictions):
+        row = next_features.iloc[i]
+        print(f"PREDICTION: {row['date']} vs {row['opponent']} ({int(row['days_out'])}d out): {prediction:,.0f}")
+        log_rows.append({
+            "run_date": today,
+            "game_date": row["date"],
+            "opponent": row["opponent"],
+            "predicted_attendance": round(prediction),
+            "mets_starter": row.get("mets_starter_name"),
+            "mets_starter_era": row.get("mets_starter_era"),
+            "opp_starter": row.get("opp_starter_name"),
+            "opp_starter_era": row.get("opp_starter_era"),
+            "avg_temp_f": row.get("avg_temp_f"),
+            "avg_precip_mm": row.get("avg_precip_mm"),
+            "is_promo": row.get("is_promo"),
+            "days_out": int(row["days_out"]),
+            "actual_attendance": None,
+        })
     print(f"{'=' * 60}")
 
     log_path = DATA_DIR / "mets_2026_predictions_log.csv"
-    log_row = pd.DataFrame([{
-        "run_date": today,
-        "game_date": game_date,
-        "opponent": opponent,
-        "predicted_attendance": round(prediction),
-        "mets_starter": next_features.iloc[0].get("mets_starter_name"),
-        "mets_starter_era": next_features.iloc[0].get("mets_starter_era"),
-        "opp_starter": next_features.iloc[0].get("opp_starter_name"),
-        "opp_starter_era": next_features.iloc[0].get("opp_starter_era"),
-        "avg_temp_f": next_features.iloc[0].get("avg_temp_f"),
-        "avg_precip_mm": next_features.iloc[0].get("avg_precip_mm"),
-        "is_promo": next_features.iloc[0].get("is_promo"),
-        "days_out": (pd.to_datetime(game_date) - pd.to_datetime(today)).days,
-        "actual_attendance": None,
-    }])
+    log_df = pd.DataFrame(log_rows)
     if log_path.exists():
-        safe_to_csv(log_row, log_path, mode="a", header=False, index=False)
+        safe_to_csv(log_df, log_path, mode="a", header=False, index=False)
     else:
-        safe_to_csv(log_row, log_path, index=False)
-    print(f"\nLogged to {log_path.name} — once the game is played, fill in 'actual_attendance' "
-          f"for that row to track accuracy.")
+        safe_to_csv(log_df, log_path, index=False)
+    print(f"\nLogged {len(log_df)} prediction(s) to {log_path.name}, once each game is played, fill in "
+          f"'actual_attendance' for that row to track accuracy.")
 
     from generate_prediction_report import build_report
     build_report()
