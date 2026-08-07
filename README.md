@@ -2,6 +2,8 @@
 
 Predicting game-day attendance for MLB home games, as a foundation for dynamic ticket pricing. Built end to end: raw data collection from public APIs, feature engineering, an interpretable model benchmarked honestly against naive baselines, a walk-forward backtest, and a fully automated daily prediction pipeline that tracks real 2026 games as the season happens.
 
+For the full story, including what didn't work and how I debugged it, see [WRITEUP.md](WRITEUP.md).
+
 ## Why the Mets, not the Padres
 
 I started with the Padres (`padres/`). After the initial EDA, I switched to the Mets (`mets/`) for a few reasons:
