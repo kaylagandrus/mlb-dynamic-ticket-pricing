@@ -21,6 +21,7 @@ Each run:
      probable starter) firms up.
 """
 
+import argparse
 import io
 import re
 import sys
@@ -174,7 +175,41 @@ def get_2026_home_games(known_game_pks=frozenset()):
     return df
 
 
-def get_weather(target_date, forecast_needed):
+def get_weather_asof(target_date, as_of_date):
+    """The forecast as it was actually issued `offset` days before target_date, using
+    Open-Meteo's previous-runs API (archives real historical forecast model runs, not
+    just current conditions). Only has data for forecasts issued 1-7 days ahead, returns
+    None if the offset is out of that range or the model run has no data for it."""
+    offset = (pd.Timestamp(target_date) - pd.Timestamp(as_of_date)).days
+    if not (1 <= offset <= 7):
+        return None
+    temp_col, precip_col = f"temperature_2m_previous_day{offset}", f"precipitation_previous_day{offset}"
+    data = api_get("https://previous-runs-api.open-meteo.com/v1/forecast", {
+        "latitude": LAT, "longitude": LON,
+        "start_date": target_date, "end_date": target_date,
+        "hourly": f"{temp_col},{precip_col}",
+        "temperature_unit": "fahrenheit",
+        "timezone": "America/New_York",
+    })
+    hourly = data.get("hourly", {})
+    temps = [t for t in hourly.get(temp_col, [])[16:21] if t is not None]
+    precip = [p for p in hourly.get(precip_col, [])[16:21] if p is not None]
+    if not temps:
+        return None
+    return {
+        "avg_temp_f": round(sum(temps) / len(temps), 1),
+        "avg_precip_mm": round(sum(precip) / len(precip), 1) if precip else None,
+    }
+
+
+def get_weather(target_date, forecast_needed, as_of_date=None):
+    if forecast_needed and as_of_date:
+        asof_weather = get_weather_asof(target_date, as_of_date)
+        if asof_weather is not None:
+            return asof_weather
+        # offset out of the previous-runs API's supported range (>7 days ahead):
+        # fall through and try archive/live below as the best available approximation
+
     base_url = "https://api.open-meteo.com/v1/forecast" if forecast_needed \
         else "https://archive-api.open-meteo.com/v1/archive"
     data = api_get(base_url, {
@@ -187,6 +222,10 @@ def get_weather(target_date, forecast_needed):
     hourly = data.get("hourly", {})
     temps = [t for t in hourly.get("temperature_2m", [])[16:21] if t is not None]
     precip = [p for p in hourly.get("precipitation", [])[16:21] if p is not None]
+    if not temps and not forecast_needed:
+        # target_date hasn't happened yet even now, archive has nothing for it yet;
+        # fall back to today's live forecast as the closest available approximation
+        return get_weather(target_date, forecast_needed=True)
     return {
         "avg_temp_f": round(sum(temps) / len(temps), 1) if temps else None,
         "avg_precip_mm": round(sum(precip) / len(precip), 1) if precip else None,
@@ -262,26 +301,41 @@ PREMIUM_NETWORKS = {"FOX", "FOX, FOX", "ESPN/ESPN App", "ESPN/ESPN App, ESPN/ESP
                     "FS1", "FS1, FS1"}
 
 
-def build_features(games_df, team_id_map, today_str):
-    """Attach weather, standings, starter ERA, promotions to every row in games_df."""
+def build_features(games_df, team_id_map, today_str, backfill=False):
+    """Attach weather, standings, starter ERA, promotions to every row in games_df.
+
+    backfill=True (used by --as-of): reconstruct the true historical forecast instead
+    of today's live one, and blank out probable starters/ERA entirely, since there's no
+    way to know whether a starter had actually been announced as of that past date."""
     rows = []
     for _, row in games_df.iterrows():
         is_future = row["date"] > today_str
-        weather = get_weather(row["date"], forecast_needed=is_future)
+        weather = get_weather(row["date"], forecast_needed=is_future,
+                               as_of_date=today_str if backfill else None)
         standings_date = today_str if is_future else row["date"]
         standings = get_standings(standings_date)
         mets_s = standings.get(TEAM_ID, {})
         opp_id = team_id_map.get(row["opponent"])
         opp_s = standings.get(opp_id, {}) if opp_id else {}
         promo = load_promotions_for_date(row["date"])
-        mets_era = get_starter_era_entering(row["mets_starter_id"], 2026, row["date"])
-        opp_era = get_starter_era_entering(row["opp_starter_id"], 2026, row["date"])
+        if backfill and is_future:
+            mets_starter_id = opp_starter_id = None
+            mets_starter_name = opp_starter_name = None
+        else:
+            mets_starter_id, opp_starter_id = row["mets_starter_id"], row["opp_starter_id"]
+            mets_starter_name, opp_starter_name = row["mets_starter_name"], row["opp_starter_name"]
+        mets_era = get_starter_era_entering(mets_starter_id, 2026, row["date"])
+        opp_era = get_starter_era_entering(opp_starter_id, 2026, row["date"])
 
         dt = pd.to_datetime(row["date"])
         rows.append({
             **row.to_dict(),
             **weather,
             **promo,
+            "mets_starter_id": mets_starter_id,
+            "mets_starter_name": mets_starter_name,
+            "opp_starter_id": opp_starter_id,
+            "opp_starter_name": opp_starter_name,
             "is_promo": int(promo["n_promotions"] > 0),
             "mets_win_pct": mets_s.get("win_pct"),
             "opp_win_pct": opp_s.get("win_pct"),
@@ -300,8 +354,21 @@ TRACKING_WINDOW_DAYS = 9  # start logging a game once it's this many days out or
 
 
 def main():
-    today = date.today().isoformat()
-    print(f"=== Mets home-game attendance prediction, run date {today} ===\n")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--as-of", default=None,
+                         help="Backfill a missed day: reconstruct the run as if it happened on this "
+                              "YYYY-MM-DD date (standings, days_out, and the training cutoff are accurate "
+                              "for that date, but probable starters and the weather forecast come from "
+                              "today's live API state, there's no way to query what either looked like "
+                              "on a past date).")
+    args = parser.parse_args()
+    today = args.as_of or date.today().isoformat()
+    if args.as_of:
+        print(f"=== Mets home-game attendance prediction, BACKFILLED for {today} ===")
+        print("    (standings/training cutoff are accurate for that date; probable starters and weather")
+        print("     reflect today's live data, not necessarily what was known on that date)\n")
+    else:
+        print(f"=== Mets home-game attendance prediction, run date {today} ===\n")
 
     master_path = DATA_DIR / "mets_2026_master.csv"
     existing = safe_read_csv(master_path) if master_path.exists() else pd.DataFrame(columns=["game_pk"])
@@ -327,14 +394,16 @@ def main():
                 starter_note = "  (starter(s) not yet announced)"
             print(f"  {g['date']} vs {g['opponent']} ({int(g['days_out'])}d out){starter_note}")
 
-    completed_2026 = games_2026[(games_2026["status"] == "Final") & games_2026["attendance"].notna()]
+    completed_2026 = games_2026[(games_2026["status"] == "Final") & games_2026["attendance"].notna()
+                                 & (games_2026["date"] <= today)]
     new_completed = completed_2026[~completed_2026["game_pk"].isin(existing["game_pk"])]
     print(f"\n{len(completed_2026)} completed games total, {len(existing)} already in mets_2026_master.csv, "
           f"{len(new_completed)} new since last run")
 
     team_id_map = get_team_id_map()
     print(f"Building features for {len(new_completed)} new completed games + {len(tracked_games)} tracked game(s)...")
-    feature_rows = build_features(pd.concat([new_completed, tracked_games]), team_id_map, today)
+    feature_rows = build_features(pd.concat([new_completed, tracked_games]), team_id_map, today,
+                                   backfill=bool(args.as_of))
 
     new_completed_features = feature_rows[feature_rows["status"] == "Final"].copy()
     next_features = feature_rows[feature_rows["status"] == "Scheduled"].copy()
