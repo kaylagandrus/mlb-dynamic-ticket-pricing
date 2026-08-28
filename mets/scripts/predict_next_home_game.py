@@ -350,6 +350,29 @@ def build_features(games_df, team_id_map, today_str, backfill=False):
     return pd.DataFrame(rows)
 
 
+def backfill_actual_attendance(completed_2026, log_path):
+    """Fill in actual_attendance for any logged prediction whose game has since been
+    played, using the attendance already pulled via fetch_attendance() in completed_2026
+    (the same boxscore-based source every other attendance number in this project uses).
+    Matches by (game_date, opponent) since the log doesn't store game_pk."""
+    if not log_path.exists():
+        return 0
+    log_df = safe_read_csv(log_path)
+    if log_df.empty:
+        return 0
+    attendance_by_game = completed_2026.set_index(["date", "opponent"])["attendance"].to_dict()
+    to_fill = log_df["actual_attendance"].isna()
+    if not to_fill.any():
+        return 0
+    filled_values = log_df.loc[to_fill].apply(
+        lambda r: attendance_by_game.get((r["game_date"], r["opponent"])), axis=1)
+    n_filled = int(filled_values.notna().sum())
+    if n_filled:
+        log_df.loc[to_fill, "actual_attendance"] = filled_values.values
+        safe_to_csv(log_df, log_path, index=False)
+    return n_filled
+
+
 TRACKING_WINDOW_DAYS = 9  # start logging a game once it's this many days out or fewer
 
 
@@ -413,6 +436,11 @@ def main():
     safe_to_csv(completed_features, master_path, index=False)
     print(f"Saved refreshed mets_2026_master.csv ({len(completed_features)} completed games total)")
 
+    log_path = DATA_DIR / "mets_2026_predictions_log.csv"
+    n_backfilled = backfill_actual_attendance(completed_features, log_path)
+    if n_backfilled:
+        print(f"Backfilled actual_attendance for {n_backfilled} logged prediction(s) whose games have been played")
+
     if next_features.empty:
         print("\nNothing within the tracking window, nothing to predict this run.")
         from generate_prediction_report import build_report
@@ -466,7 +494,6 @@ def main():
         })
     print(f"{'=' * 60}")
 
-    log_path = DATA_DIR / "mets_2026_predictions_log.csv"
     log_df = pd.DataFrame(log_rows)
     if log_path.exists():
         safe_to_csv(log_df, log_path, mode="a", header=False, index=False)
