@@ -61,18 +61,18 @@ date,season,opponent,home_score,away_score,attendance,status,game_pk,game_number
 2026-07-31,2026,Miami Marlins,2.0,5.0,33064,Final,823593,1,0,0
 2026-08-01,2026,Miami Marlins,2.0,6.0,30078,Final,823594,1,0,0
 2026-08-02,2026,Miami Marlins,0.0,2.0,32109,Final,823592,1,0,0
-2026-08-14,2026,Washington Nationals,,,,Scheduled,823591,1,0,0
-2026-08-15,2026,Washington Nationals,,,,Scheduled,823588,1,0,0
-2026-08-16,2026,Washington Nationals,,,,Scheduled,823590,1,0,0
-2026-08-17,2026,San Diego Padres,,,,Scheduled,823589,1,0,0
-2026-08-18,2026,San Diego Padres,,,,Scheduled,823586,1,0,0
-2026-08-19,2026,San Diego Padres,,,,Scheduled,823587,1,0,0
-2026-08-25,2026,Milwaukee Brewers,,,,Scheduled,823585,1,0,0
-2026-08-26,2026,Milwaukee Brewers,,,,Scheduled,823584,1,0,0
-2026-08-27,2026,Milwaukee Brewers,,,,Scheduled,823581,1,0,0
-2026-08-28,2026,Houston Astros,,,,Scheduled,823583,1,0,0
-2026-08-29,2026,Houston Astros,,,,Scheduled,823582,1,0,0
-2026-08-30,2026,Houston Astros,,,,Scheduled,823580,1,0,0
+2026-08-14,2026,Washington Nationals,4.0,1.0,30660,Final,823591,1,0,0
+2026-08-15,2026,Washington Nationals,5.0,4.0,34737,Final,823588,1,0,0
+2026-08-16,2026,Washington Nationals,4.0,3.0,28624,Final,823590,1,0,0
+2026-08-17,2026,San Diego Padres,2.0,1.0,27842,Final,823589,1,0,0
+2026-08-18,2026,San Diego Padres,2.0,5.0,35508,Final,823586,1,0,0
+2026-08-19,2026,San Diego Padres,4.0,2.0,26195,Final,823587,1,0,0
+2026-08-25,2026,Milwaukee Brewers,3.0,2.0,28942,Final,823585,1,0,0
+2026-08-26,2026,Milwaukee Brewers,1.0,8.0,23607,Final,823584,1,0,0
+2026-08-27,2026,Milwaukee Brewers,2.0,8.0,26611,Final,823581,1,0,0
+2026-08-28,2026,Houston Astros,1.0,3.0,28848,Final,823583,1,0,0
+2026-08-29,2026,Houston Astros,6.0,2.0,29183,Final,823582,1,0,0
+2026-08-30,2026,Houston Astros,3.0,4.0,,In Progress,823580,1,0,0
 2026-09-04,2026,San Francisco Giants,,,,Scheduled,823579,1,0,0
 2026-09-05,2026,San Francisco Giants,,,,Scheduled,823577,1,0,0
 2026-09-06,2026,San Francisco Giants,,,,Scheduled,823578,1,0,0
