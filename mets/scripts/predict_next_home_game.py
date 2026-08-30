@@ -87,7 +87,7 @@ NUMERIC_FEATURES = [
     "is_promo", "is_bobblehead", "n_promotions",
     "is_national", "is_premium_national",
     "mets_win_pct", "opp_win_pct",
-    "mets_streak_num",
+    "mets_streak_num", "mets_games_back",
     "mets_starter_era", "opp_starter_era",
     "is_day_game", "is_game2",
 ]
@@ -245,9 +245,15 @@ def get_standings(as_of_date):
             if streak_num is not None and streak.get("streakType") == "losses":
                 streak_num = -streak_num
             lr = tr.get("leagueRecord", {})
+            last_ten = next((sr for sr in tr.get("records", {}).get("splitRecords", [])
+                              if sr.get("type") == "lastTen"), {})
+            gb_raw = tr.get("gamesBack")
+            games_back = 0.0 if gb_raw in ("-", None) else float(gb_raw)
             teams[team_id] = {
                 "win_pct": float(lr.get("pct") or 0),
                 "streak_num": streak_num,
+                "last10_pct": float(last_ten.get("pct") or 0) if last_ten else None,
+                "games_back": games_back,
             }
     return teams
 
@@ -340,6 +346,8 @@ def build_features(games_df, team_id_map, today_str, backfill=False):
             "mets_win_pct": mets_s.get("win_pct"),
             "opp_win_pct": opp_s.get("win_pct"),
             "mets_streak_num": mets_s.get("streak_num"),
+            "mets_last10_pct": mets_s.get("last10_pct"),
+            "mets_games_back": mets_s.get("games_back"),
             "mets_starter_era": mets_era,
             "opp_starter_era": opp_era,
             "is_premium_national": int(row.get("national_network") in PREMIUM_NETWORKS),
